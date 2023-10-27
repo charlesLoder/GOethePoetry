@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/htmx.org@1.9.6" defer></script>
+    <link rel="stylesheet" href="/static/style.css">
+    <title>HTMX</title>
+</head>
+<body>
+    <main>
+        <div id="poem-results"></div>
+    </main>
+    <div id="button-container">
+        <button hx-get="/poem" hx-target="#poem-results">
+            Find your Muse
+        </button>
+    </div>
+    <div id="vines">
+        <img src="/static/vines.svg" alt="vines">
+    </div>
+</body>
+</html>

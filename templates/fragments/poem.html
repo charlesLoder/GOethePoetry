@@ -1,0 +1,12 @@
+<div class="poem">
+    <div>
+        <h3 class="title">{{ .Title }}</h3>
+        <p class="author"><span class="by">by</span> {{ .Author }}</p>
+    </div>
+    <!-- loop over the lines -->
+    <ul class="lines">
+    {{ range .Lines }}
+        <li>{{ . }}</li>
+    {{ end }}
+</ul>
+</div>

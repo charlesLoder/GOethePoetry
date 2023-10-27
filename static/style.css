@@ -1,0 +1,126 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+* {
+	box-sizing: border-box;
+}
+
+html, body {
+	margin: 0;
+	padding: 0;
+}
+
+:root{
+	--background: #8BBD8B;
+	--primary-accent: #D81E5B;
+	--secondary-accent: #F9E0D9;
+}
+
+body {
+	background-color: var(--background);
+	height: 100dvh;
+ }
+
+main {
+	width: 100%;
+	padding: 1rem;
+	padding-top: 10%;
+	margin: auto;
+	display: grid;
+	grid-template-columns: 1fr;
+	justify-items: center;
+	align-items: center;
+	overflow-y: scroll;
+	position: relative;
+	height: 90%;
+}
+
+#poem-results {
+	max-width: 300px;
+}
+
+#button-container {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	padding: 1rem;
+	background-color: var(--background);
+}
+
+button {
+	background-color: var(--primary-accent);
+	margin: auto;
+	/* a modern pill button with a flat appearance */
+	border: none;
+	border-radius: 20px;
+	padding: 10px 20px;
+	color: white;
+	font-size: 1.2rem;
+	font-weight: bold;
+	text-transform: uppercase;
+	/* https://coolors.co/251605-f9e0d9-8bbd8b-d81e5b-386150 */
+}
+
+.poem h3.title {
+	font-size: 2rem;
+	font-weight: bold;
+	text-align: start;
+	font-family: 'Baskerville';
+}
+
+.poem p.author {
+	margin: .5rem 0;
+	text-align: end;
+	font-size: 1.2rem;
+}
+
+.poem p.author > span {
+	font-style: italic;
+}
+
+.poem > ul.lines  {
+	padding: 0;
+}
+
+.poem > ul.lines >  li {
+	font-size: 1.2rem;
+	line-height: 1.5;
+	font-size: 1rem;
+	list-style-type: none;
+}
+
+#vines > img {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	overflow: hidden;
+	width:150px;
+	overflow: hidden;
+	transform: rotateY(180deg);
+	max-width: 150px;
+
+}
+
+.htmx-request {
+	background: linear-gradient(45deg, var(--primary-accent), var(--secondary-accent), var(--primary-accent));
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+  }
+
+  @keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+/* TODO: why so much space at the bottom on mobile */
